@@ -51,7 +51,7 @@ git clone https://github.com/NataNogueira/order-flow-api.git
 ```
 npm install dotenv express pg jsonwebtoken
 ``` 
-- Configure o arquivo `.env`: Crie um arquivo .env na raiz e adicione:
+- Configure o arquivo `.env`, crie um arquivo .env na raiz e adicione:
 
 ```
 DB_USER=seu_usuario
@@ -87,7 +87,7 @@ Exemplo: curl.exe -X GET http://localhost:3000/order/list -H "Authorization: Bea
 | `DELETE` | `/order/:id` | Remove um pedido |
 
 
-# 🛠️ Tecnologias e Dependências
+# Tecnologias e Dependências
 Este projeto foi construído utilizando:
 - `Node.js:` Ambiente de execução JavaScript.
 - `Express:` Framework web para roteamento.
