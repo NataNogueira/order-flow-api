@@ -57,9 +57,9 @@ npm install dotenv express pg jsonwebtoken
 DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
 DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=order-flow-api
-JWT_SECRET=minha_chave_super_secreta_123 
+DB_PORT=<porta>
+DB_DATABASE=<seu_db>
+JWT_SECRET=<sua_chave> 
 ```
 
 - Inicie a aplicação:
