@@ -1,4 +1,6 @@
-// Instanciamento
+// Arquivo de entrada principal da aplicação
+
+// Instanciamento 
 const express = require('express');
 const orderRoutes = require('./routes/orderRoutes');
 
