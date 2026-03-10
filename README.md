@@ -39,6 +39,7 @@ O projeto é uma solução de um desafio de backend onde o foco é gerenciar o c
 ## Pré-requisitos
 - `Node.js instalado.`
 - `PostgreSQL configurado.`
+- `Docker instalado`
 - `Um gerenciador de terminal (Git Bash, PowerShell ou VS Code).`
 
 ## Passos para execução
@@ -47,24 +48,9 @@ O projeto é uma solução de um desafio de backend onde o foco é gerenciar o c
 ```
 git clone https://github.com/NataNogueira/order-flow-api.git
 ```
-- Instale as dependências contidas no arquivo 'package.json':
-```
-npm install dotenv express pg jsonwebtoken
-``` 
-- Configure o arquivo `.env`, crie um arquivo .env na raiz e adicione:
-
-```
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_HOST=localhost
-DB_PORT=<porta>
-DB_DATABASE=<seu_db>
-JWT_SECRET=<sua_chave> 
-```
-
 - Inicie a aplicação:
 ```
-npm start
+docker compose up --build
 ```
 
 # Autenticação
