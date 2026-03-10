@@ -1,9 +1,9 @@
 // Instanciamentos
 const { Router } = require('express');
 const { dbPool } = require('../config/database');
-const OrderModel = require('../models/OrderModel');
-const OrderService = require('../services/OrderService');
-const OrderController = require('../controllers/OrderController');
+const OrderModel = require('../models/orderModel');
+const OrderService = require('../services/orderService');
+const OrderController = require('../controllers/orderController');
 const auth = require('../middleware/auth');
 
 const router = Router();
