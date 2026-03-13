@@ -87,8 +87,11 @@ Este projeto foi construído utilizando:
 #
 <h3 align="center">
 
-  <div style="display: inline_block"><br>
-    <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+  <div style="display: inline_block">
+    <img align="center" alt="JavaScript" height="30" width="40" src="https://skillicons.dev/icons?i=javascript"/>
+    <img align="center" alt="Docker" height="30" width="40" src="https://skillicons.dev/icons?i=docker"/>
+    <img align="center" alt="NodeJs" height="30" widht="40" src="https://skillicons.dev/icons?i=nodejs"/>
+    <img align="center" alt="PostgreSQL" height="30" widht="40" src="https://skillicons.dev/icons?i=postgres"/>
   </div>
 
 </h3>
