@@ -4,11 +4,13 @@ O projeto é uma solução de um desafio de backend onde o foco é gerenciar o c
 
 # Estrutura do Projeto
 ``` 
-├── server.js
-├── package.json
-├── README.md
+├── server.js                  <-- Coloca a aplicação no ar
+├── package.json               <-- Metadados
+├── dockerfile                 <-- Receita da imagem API
+├── docker-compose.yml         <-- Orquestrador 
+├── README.md                  <-- Documentação do projeto
 └── src/
-    ├── app.js
+    ├── app.js                 <-- Arquiteto da aplicação
     ├── config/
     │   └── database.js        <-- Conexão com o PostgreSQL (Pool)
     ├── routes/
