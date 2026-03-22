@@ -80,6 +80,7 @@ Este projeto foi construído utilizando:
 - `Node.js:` Ambiente de execução JavaScript.
 - `Express:` Framework web para roteamento.
 - `PostgreSQL:` Banco de dados relacional para persistência.
+- `Swagger:` Documentação interativa e detalhada da API. 
 - `jsonwebtoken (JWT):` Segurança e autenticação.
 - `dotenv:` Gerenciamento de variáveis de ambiente.
 - `pg:` Driver de conexão com PostgreSQL.
