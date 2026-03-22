@@ -1,4 +1,5 @@
 const { Pool } = require('pg');
+const { logger } = require('../middleware/logger');
 require('dotenv').config();
 
 // Configuração para o banco específico do desafio
@@ -25,11 +26,11 @@ const setupDatabase = async () => {
         const checkDb = await adminPool.query(`SELECT 1 FROM pg_database WHERE datname = $1`, [dbName]);
 
         if (checkDb.rowCount === 0) {
-            console.log(`Criando banco de dados ${dbName}...`);
+            logger.info(`Criando banco de dados ${dbName}...`);
             await adminPool.query(`CREATE DATABASE "${dbName}"`);
         }
     } catch (erro) {
-        console.error("Erro ao checar/criar banco de dados:", erro);
+        logger.error("Erro ao checar/criar banco de dados:", erro);
     } finally {
         await adminPool.end();
     }
@@ -52,9 +53,9 @@ const setupDatabase = async () => {
     // Logs de sucesso/erro
     try {
         await dbPool.query(tableQuery);
-        console.log("Banco de dados e tabelas checadas/criadas com sucesso.");
+        logger.info("Banco de dados e tabelas checadas/criadas com sucesso.");
     } catch (erro) {
-        console.error("Erro ao criar as tabelas:", erro);
+        logger.error("Erro ao criar as tabelas:", erro);
     }
 };
 

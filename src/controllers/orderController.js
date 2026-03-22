@@ -5,6 +5,19 @@ class OrderController {
 
     async create(req, res) {
         try {
+            const { numeroPedido, valorTotal, dataCriacao, items } = req.body;
+
+            if (!numeroPedido) throw new Error("O campo 'numeroPedido' é obrigatório.");
+            if (valorTotal === undefined || isNaN(valorTotal)) throw new Error("O campo 'valorTotal' é obrigatório e deve ser um número.");
+            if (!dataCriacao || isNaN(Date.parse(dataCriacao))) throw new Error("O campo 'dataCriacao' é obrigatório e deve ser uma data válida.");
+            if (!items || !Array.isArray(items) || items.length === 0) throw new Error("O campo 'items' deve ser um array preenchido.");
+
+            items.forEach((item, index) => {
+                if (!item.idItem || !item.quantidadeItem || item.valorItem === undefined) {
+                    throw new Error(`Item no índice ${index} está incompleto (idItem, quantidadeItem e valorItem são obrigatórios).`);
+                }
+            });
+
             const order = await this.orderService.create(req.body);
             res.status(201).json(order);
         } catch (e) {
@@ -24,6 +37,11 @@ class OrderController {
 
     async update(req, res) {
         try {
+            const { valorTotal } = req.body;
+            if (valorTotal === undefined || isNaN(valorTotal)) {
+                throw new Error("O campo 'valorTotal' é obrigatório para atualização e deve ser um número.");
+            }
+
             const updated = await this.orderService.update(req.params.id, req.body);
             res.json(updated);
         } catch (e) {

@@ -6,8 +6,8 @@ const auth = (req, res, next) => {
     if (!token) return res.status(401).json({ error: 'Acesso negado. Token não fornecido.' });
 
     try {
-        // Se a chave token estiver configurada dentro do seu .env irá seguir
-        const verified = jwt.verify(token.replace('Bearer ', ''), process.env.JWT_SECRET);
+        const secret = process.env.JWT_SECRET || 'fallback_secret';
+        const verified = jwt.verify(token.replace('Bearer ', ''), secret);
         req.user = verified;
         next();
     } catch (err) {

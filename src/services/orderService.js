@@ -19,8 +19,8 @@ class OrderService {
     }
 
     async update(id, payload) {
-        const domainData = OrderMapper.toDomain(payload);
-        return await this.orderModel.updateValue(id, domainData.value);
+        const value = payload.valorTotal;
+        return await this.orderModel.updateValue(id, value);
     }
 
     async delete(id) {
