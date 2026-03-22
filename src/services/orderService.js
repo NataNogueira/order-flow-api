@@ -1,4 +1,4 @@
-const OrderMapper = require('../models/OrderMapper');
+const OrderMapper = require('../models/orderMapper');
 
 class OrderService {
     constructor(orderModel) {
