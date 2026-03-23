@@ -78,6 +78,7 @@ Exemplo: curl.exe -X GET http://localhost:3000/order/list -H "Authorization: Bea
 # Tecnologias e Dependências
 Este projeto foi construído utilizando:
 - `Node.js:` Ambiente de execução JavaScript.
+- `Docker:` Conteiner de hospedagem da aplicação.
 - `Express:` Framework web para roteamento.
 - `PostgreSQL:` Banco de dados relacional para persistência.
 - `Swagger:` Documentação interativa e detalhada da API. 
