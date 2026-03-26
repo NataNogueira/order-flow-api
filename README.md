@@ -50,10 +50,22 @@ O projeto é uma solução de um desafio de backend onde o foco é gerenciar o c
 ```
 git clone https://github.com/NataNogueira/order-flow-api.git
 ```
-- Inicie a aplicação:
+- Inicie a aplicação com Docker:
 ```
 docker compose up --build
 ```
+
+- Inicie a aplicação sem Docker através dos códigos a seguir para instalar as bibliotecas necessárias e inicializar o servidor da API:
+```
+npm install
+```
+```
+node server.js 
+```
+
+- No log do terminal irá aparecer as informações a seguir, basta apenas copiar a URL e colar no navegador ou utilizar CRTL e clicar na URL:
+- `INFO: Servidor rodando em http://localhost:3000`  <- Onde a aplicação roda
+- `INFO: Documentação disponível em http://localhost:3000/docs`  <- Onde o usuário consegue interagir com a API através do Swagger
 
 # Autenticação
 A API utiliza o *JWT (JSON Web Token)*.
