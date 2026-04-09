@@ -28,7 +28,7 @@ O projeto é uma solução de um desafio de backend onde o foco é gerenciar o c
 ```
 
 
-# O que o código faz na prática:
+# O que o código faz na prática
 `Gerenciamento de Pedidos:` Permite a criação (POST), leitura (GET), listagem (GET list), atualização (PUT) e remoção (DELETE) de pedidos.
 
 `Segurança:` Implementa um sistema de autenticação via JWT (JSON Web Token). Toda e qualquer requisição à API é validada por um "porteiro" (middleware), garantindo que apenas usuários autenticados acessem os dados sensíveis.
